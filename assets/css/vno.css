@@ -8286,13 +8286,13 @@ i {
     -webkit-transition: all 0.2s ease-in;
 }
 
-.profilepic:hover {
-    -webkit-animation: btnGroups 1s linear;
-    -webkit-animation: btnGroups 1s linear;
-    -moz-animation: btnGroups 1s linear;
-    -ms-animation: btnGroups 1s linear;
-    animation: btnGroups 1s linear;
-}
+/*.profilepic:hover {*/
+/*    -webkit-animation: btnGroups 1s linear;*/
+/*    -webkit-animation: btnGroups 1s linear;*/
+/*    -moz-animation: btnGroups 1s linear;*/
+/*    -ms-animation: btnGroups 1s linear;*/
+/*    animation: btnGroups 1s linear;*/
+/*}*/
 
 @-webkit-keyframes btnGroups {
     0% {
