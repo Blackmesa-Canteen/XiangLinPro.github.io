@@ -47,10 +47,27 @@ $(document).ready(function () {
     /**
      *  壁纸api
      */
-    var index = sessionStorage.getItem("index");
+    var url = "https://lab.996workers.icu/api/bing/0";
+
+    // 先康康session里有没有
+    var imgUrl = JSON.parse(sessionStorage.getItem("imgUrl"));
     var $panel = $('#panel');
 
-    var url = "https://api.dujin.org/bing/1920.php";
+    if (imgUrl == null) {
+        $.get(url, (result) => {
+            if (result.status === 1) {
+                imgUrl = result.bing.url;
+
+                $panel.css("background", "url('" + imgUrl + "') center center no-repeat #666");
+                $panel.css("background-size", "cover");
+                sessionStorage.setItem("imgUrl", JSON.stringify(imgUrl))
+            }
+        })
+    } else {
+        // 直接用session里的得了
+        $panel.css("background", "url('" + imgUrl + "') center center no-repeat #666");
+        $panel.css("background-size", "cover");
+    }
 
 	// 在线壁纸
     $panel.css("background", "url('" + url + "') center center no-repeat #666");
