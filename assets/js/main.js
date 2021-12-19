@@ -69,14 +69,14 @@ $(document).ready(function () {
         $panel.css("background-size", "cover");
     }
 
-	// 在线壁纸
-    $panel.css("background", "url('" + url + "') center center no-repeat #666");
+    // 在线壁纸
+    // $panel.css("background", "url('" + url + "') center center no-repeat #666");
 
-	// 本地壁纸
-	// $panel.css("background", "url(../img/bg.jpg) center center no-repeat #666");
+    // 本地壁纸
+    // $panel.css("background", "url(../img/bg.jpg) center center no-repeat #666");
 
-    $panel.css("background-size", "cover");
-    sessionStorage.setItem("index", index);
+    // $panel.css("background-size", "cover");
+    // sessionStorage.setItem("index", index);
 
 
     $(".iUp").each(function (i, e) {
